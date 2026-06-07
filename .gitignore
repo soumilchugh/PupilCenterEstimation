@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environments
+.env
+.env.*
+venv/
+env/
+.venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data and model artifacts
+data/
+datasets/
+models/
+checkpoints/
+*.h5
+*.pkl
+*.pickle
+*.joblib
+
+# Logs and outputs
+logs/
+runs/
+outputs/
+*.log
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
