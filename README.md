@@ -54,7 +54,3 @@ Adaptive histogram equalization plus power-law transformation:
 Mean pixel error after training with different enhancement techniques:
 
 <img src="result.png" height="300" width="500">
-
-## Portfolio Context
-
-This project is part of Soumil Chugh's computer-vision and eye-tracking work, alongside later research in VR gaze estimation, pupil segmentation, and gaze-tracking systems.
