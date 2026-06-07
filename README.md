@@ -1,24 +1,60 @@
-# CNN Architecture for Pupil Center Estimation in eye images extracted from head tracker of a smartphone
-*5 Convolutional Layers with a stride of 1 and 3x3 filters</br>
-* 1 Fully Connected Layer with 2048 units</br>
-* Average Pooling of 2x2 with a stride of 2</br>
-* Batch Normalization and Dropout after every layer</br>
-* Loss Function – Euclidean Distance between true and predicted labels</br>
+# Pupil Center Estimation
 
-# Raw images of the pupil obtained from a infrared camera in a smartphone along with their histograms
-<img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/eye1.png" height="300" width="200"> <img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/histogram1.png" height="300" width="600"/>
-<img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/eye1.png" height="300" width="200"> <img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/histogram2.png" height="300" width="600">
+This repository explores CNN-based pupil center estimation from infrared eye images captured with a smartphone-based head tracker.
 
-# Result of applying different image enhancement techniques such as Histogram Equalisation, Power Law, Adaptive Histogram Equalisation
-* Adaptive Histogram Equalisation
-<img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/clahe.png" height="300" width="200">
-* Power Law
-<img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/Powerlaw.png" height="300" width="200">
-* Histogram Equalisation
-<img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/histequal.png" height="300" width="200">
-* Adaptive Histogram Equalisation plus Power Law
-<img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/clahe_powerlaw.png" height="300" width="200">
+The project focuses on estimating pupil center coordinates from eye images and comparing how different image-enhancement techniques affect localization error.
 
-# Mean Pixel Error after training on the same dataset but with different image enhancement techniques
-<img src="https://github.com/soumilchugh/PupilCenterEstimation/blob/master/result.png" height="300" width="500">
+## Model Overview
 
+The CNN architecture uses:
+
+- Five convolutional layers with 3x3 filters and stride 1
+- Average pooling with 2x2 windows and stride 2
+- Batch normalization and dropout after each layer
+- One fully connected layer with 2048 units
+- Euclidean distance between true and predicted pupil centers as the loss function
+
+## Image Enhancement Experiments
+
+The project compares several preprocessing approaches:
+
+- Histogram equalization
+- Power-law transformation
+- Adaptive histogram equalization
+- Adaptive histogram equalization combined with power-law transformation
+
+## Example Inputs
+
+Raw infrared eye image and histogram examples:
+
+<img src="eye1.png" height="300" width="200"> <img src="histogram1.png" height="300" width="600">
+
+<img src="eye1.png" height="300" width="200"> <img src="histogram2.png" height="300" width="600">
+
+## Enhancement Results
+
+Adaptive histogram equalization:
+
+<img src="clahe.png" height="300" width="200">
+
+Power-law transformation:
+
+<img src="Powerlaw.png" height="300" width="200">
+
+Histogram equalization:
+
+<img src="histequal.png" height="300" width="200">
+
+Adaptive histogram equalization plus power-law transformation:
+
+<img src="clahe_powerlaw.png" height="300" width="200">
+
+## Evaluation
+
+Mean pixel error after training with different enhancement techniques:
+
+<img src="result.png" height="300" width="500">
+
+## Portfolio Context
+
+This project is part of Soumil Chugh's computer-vision and eye-tracking work, alongside later research in VR gaze estimation, pupil segmentation, and gaze-tracking systems.
